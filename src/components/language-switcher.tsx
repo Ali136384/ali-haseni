@@ -23,7 +23,7 @@ export function LanguageSwitcher({
 
   return (
     <div
-      className={`inline-flex h-9 items-center rounded-full border border-line bg-white/70 p-1 ${className}`}
+      className={`inline-flex h-9 w-fit shrink-0 items-center rounded-full border border-line bg-white/70 p-1 ${className}`}
       role="group"
       aria-label="Language"
     >
@@ -34,7 +34,7 @@ export function LanguageSwitcher({
             key={item}
             href={switchPath(item)}
             hrefLang={item}
-            className={`inline-flex h-full items-center justify-center rounded-full px-3 text-xs font-semibold tracking-wide transition-colors ${
+            className={`inline-flex h-full min-w-9 items-center justify-center rounded-full px-3 text-xs font-semibold tracking-wide transition-colors ${
               active
                 ? "bg-[#0d6b66] text-white"
                 : "text-ink-soft hover:bg-ink/5 hover:text-ink"

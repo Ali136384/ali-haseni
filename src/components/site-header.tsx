@@ -155,11 +155,11 @@ export function SiteHeader({ locale, dict }: SiteHeaderProps) {
               );
             })}
 
-            <div className="mt-3 flex flex-col gap-3 border-t border-line/70 pt-4">
-              <LanguageSwitcher locale={locale} />
+            <div className="mt-3 flex flex-col items-stretch gap-3 border-t border-line/70 pt-4">
+              <LanguageSwitcher locale={locale} className="self-start" />
               <Link
                 href={localizedPath(locale, "/contact")}
-                className="inline-flex h-11 items-center justify-center rounded-full bg-[#0d6b66] px-4 text-sm font-medium text-white transition-colors hover:bg-[#094f4b]"
+                className="inline-flex h-11 w-full items-center justify-center rounded-full bg-[#0d6b66] px-4 text-sm font-medium text-white transition-colors hover:bg-[#094f4b]"
               >
                 {dict.nav.hireMe}
               </Link>
