@@ -20,6 +20,9 @@ const tr = {
     experience: "Deneyim",
     education: "Eğitim",
     competencies: "Temel yetkinlikler",
+    competenciesEyebrow: "Yetkinlikler",
+    competenciesSubtitle:
+      "Ürünleri nasıl inşa ettiğimin net bir haritası — arayüz, sistemler ve teslimat disiplini.",
     selectedWork: "Seçili işler",
     seeAllWork: "Tüm işleri gör →",
     nextStep: "Sonraki adım",
@@ -76,16 +79,39 @@ const tr = {
     ],
     instructionNote: "Eğitim dili: İngilizce",
   },
-  competencies: [
-    "MERN Stack (MongoDB, Express.js, React, Node.js)",
-    "Next.js (App Router, Server Components, Server Actions)",
-    "Back-End ve Veritabanı Yönetimi (MongoDB, PostgreSQL)",
-    "RESTful API Tasarımı ve Entegrasyonu",
-    "Kimlik Doğrulama ve Yetkilendirme",
-    "Front-End (React.js, Next.js, Tailwind CSS)",
-    "Duyarlı ve Çoklu Tarayıcı Tasarımı",
-    "Performans Optimizasyonu ve Hata Ayıklama",
-    "Versiyon Kontrolü (Git, GitHub)",
+  competencyCategories: [
+    {
+      id: "frontend",
+      title: "Frontend Geliştirme",
+      skills: [
+        "React.js",
+        "Next.js",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Duyarlı ve Çoklu Tarayıcı Tasarımı",
+      ],
+    },
+    {
+      id: "backend",
+      title: "Backend Geliştirme",
+      skills: [
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "PostgreSQL",
+        "RESTful API Tasarımı ve Entegrasyonu",
+        "Kimlik Doğrulama ve Yetkilendirme",
+      ],
+    },
+    {
+      id: "tools",
+      title: "En İyi Uygulamalar ve Araçlar",
+      skills: [
+        "SEO",
+        "Performans Optimizasyonu ve Hata Ayıklama",
+        "Git & GitHub",
+      ],
+    },
   ],
   experience: {
     toptalla: {

@@ -36,7 +36,7 @@ export default async function HomePage({
           className="absolute inset-0 -z-10 bg-gradient-to-r from-ink/70 via-ink/35 to-transparent"
         />
 
-        <div className="mx-auto flex min-h-[100svh] w-full max-w-6xl items-end px-6 pb-16 pt-36 sm:px-8 sm:pb-20 lg:items-center lg:pb-24">
+        <div className="mx-auto flex min-h-[100svh] w-full max-w-6xl items-end px-6 pb-16 pt-20 sm:px-8 sm:pb-20 lg:items-center lg:pb-24">
           <div className="max-w-2xl text-white">
             <p className="animate-rise text-xs font-medium uppercase tracking-[0.22em] text-white/70">
               {dict.home.eyebrow}
@@ -145,37 +145,6 @@ export default async function HomePage({
             </li>
           ))}
         </ul>
-      </section>
-
-      <section className="border-t border-line bg-ink text-paper">
-        <div className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-16 sm:flex-row sm:items-end sm:justify-between sm:px-8 sm:py-20">
-          <div className="max-w-xl">
-            <p className="text-xs font-medium uppercase tracking-[0.18em] text-paper/55">
-              {dict.common.nextStep}
-            </p>
-            <h2 className="mt-4 font-display text-3xl font-bold tracking-tight sm:text-4xl">
-              {dict.home.ctaTitle}
-            </h2>
-            <p className="mt-4 text-sm leading-relaxed text-paper/70 sm:text-base">
-              {dict.home.ctaNotePrefix} · {dict.site.languages.join(" · ")} ·{" "}
-              {site.phone}
-            </p>
-          </div>
-          <div className="flex flex-wrap gap-3">
-            <Link
-              href={localizedPath(locale, "/contact")}
-              className="bg-white px-6 py-3 text-sm font-medium text-[#10141c] transition-colors hover:bg-[#f3f3f3]"
-            >
-              {dict.common.contact}
-            </Link>
-            <a
-              href={`mailto:${site.email}`}
-              className="border border-white/40 px-6 py-3 text-sm font-medium text-white transition-colors hover:border-white/70"
-            >
-              {dict.common.emailDirectly}
-            </a>
-          </div>
-        </div>
       </section>
     </>
   );

@@ -62,7 +62,7 @@ export function ContactForm({ locale, dict }: ContactFormProps) {
           name="message"
           required
           rows={5}
-          className="mt-2 w-full resize-y border border-line bg-white/50 px-4 py-3 text-ink outline-none transition focus:border-teal"
+          className="mt-2 w-full resize-none border border-line bg-white/50 px-4 py-3 text-ink outline-none transition focus:border-teal"
         />
       </div>
       <button

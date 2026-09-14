@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { CompetenciesSection } from "@/components/competencies-section";
 import { isLocale, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import {
@@ -52,6 +53,13 @@ export default async function AboutPage({
         </div>
       </section>
 
+      <CompetenciesSection
+        eyebrow={dict.common.competenciesEyebrow}
+        title={dict.common.competencies}
+        subtitle={dict.common.competenciesSubtitle}
+        categories={dict.competencyCategories}
+      />
+
       <section className="mt-20 grid gap-12 lg:grid-cols-[1.15fr_0.85fr]">
         <div>
           <h2 className="font-display text-2xl font-semibold tracking-tight text-ink">
@@ -93,22 +101,6 @@ export default async function AboutPage({
         </div>
 
         <aside className="space-y-12 lg:border-l lg:border-line lg:pl-10">
-          <div>
-            <h2 className="font-display text-xl font-semibold text-ink">
-              {dict.common.competencies}
-            </h2>
-            <ul className="mt-5 space-y-3">
-              {dict.competencies.map((skill) => (
-                <li
-                  key={skill}
-                  className="border-b border-line/80 pb-3 text-sm text-ink-soft last:border-b-0"
-                >
-                  {skill}
-                </li>
-              ))}
-            </ul>
-          </div>
-
           <div>
             <h2 className="font-display text-xl font-semibold text-ink">
               {dict.common.education}

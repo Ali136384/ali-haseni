@@ -6,12 +6,12 @@ import { localeLabels, locales, type Locale } from "@/i18n/config";
 
 type LanguageSwitcherProps = {
   locale: Locale;
-  onHome?: boolean;
+  className?: string;
 };
 
 export function LanguageSwitcher({
   locale,
-  onHome = false,
+  className = "",
 }: LanguageSwitcherProps) {
   const pathname = usePathname();
 
@@ -23,9 +23,7 @@ export function LanguageSwitcher({
 
   return (
     <div
-      className={`flex items-center gap-1 text-xs font-medium tracking-wide ${
-        onHome ? "text-paper/70" : "text-ink-soft"
-      }`}
+      className={`inline-flex h-9 items-center rounded-full border border-line bg-white/70 p-1 ${className}`}
       role="group"
       aria-label="Language"
     >
@@ -36,14 +34,10 @@ export function LanguageSwitcher({
             key={item}
             href={switchPath(item)}
             hrefLang={item}
-            className={`px-2 py-1 transition-colors ${
+            className={`inline-flex h-full items-center justify-center rounded-full px-3 text-xs font-semibold tracking-wide transition-colors ${
               active
-                ? onHome
-                  ? "bg-white text-[#10141c]"
-                  : "bg-[#10141c] text-white"
-                : onHome
-                  ? "text-white/75 hover:text-white"
-                  : "hover:text-[#10141c]"
+                ? "bg-[#0d6b66] text-white"
+                : "text-ink-soft hover:bg-ink/5 hover:text-ink"
             }`}
             aria-current={active ? "true" : undefined}
           >

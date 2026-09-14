@@ -20,6 +20,9 @@ const en = {
     experience: "Experience",
     education: "Education",
     competencies: "Core competencies",
+    competenciesEyebrow: "Skills",
+    competenciesSubtitle:
+      "A clear map of how I build products — interface, systems, and delivery craft.",
     selectedWork: "Selected work",
     seeAllWork: "See all work →",
     nextStep: "Next step",
@@ -75,16 +78,39 @@ const en = {
     ],
     instructionNote: "Medium of Instruction: English",
   },
-  competencies: [
-    "MERN Stack (MongoDB, Express.js, React, Node.js)",
-    "Next.js (App Router, Server Components, Server Actions)",
-    "Back-End & Database Management (MongoDB, PostgreSQL)",
-    "RESTful API Design & Integration",
-    "Authentication & Authorization",
-    "Front-End (React.js, Next.js, Tailwind CSS)",
-    "Responsive & Cross-Browser Design",
-    "Performance Optimization & Debugging",
-    "Version Control (Git, GitHub)",
+  competencyCategories: [
+    {
+      id: "frontend",
+      title: "Frontend Development",
+      skills: [
+        "React.js",
+        "Next.js",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Responsive & Cross-Browser Design",
+      ],
+    },
+    {
+      id: "backend",
+      title: "Backend Development",
+      skills: [
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "PostgreSQL",
+        "RESTful API Design & Integration",
+        "Authentication & Authorization",
+      ],
+    },
+    {
+      id: "tools",
+      title: "Best Practices & Tools",
+      skills: [
+        "SEO",
+        "Performance Optimization & Debugging",
+        "Git & GitHub",
+      ],
+    },
   ],
   experience: {
     toptalla: {
